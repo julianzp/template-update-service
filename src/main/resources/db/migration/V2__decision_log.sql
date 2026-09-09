@@ -53,8 +53,15 @@ create table change_summary (
     model_id       text,
     prompt_version text,
     generated_at   timestamptz not null default now(),
-    -- Never overwritten. A new prompt writes a new row and points the old one
-    -- at it, preserving the evidence behind decisions already made.
+    -- Never overwritten: a new prompt writes a new row rather than editing this one,
+    -- preserving the evidence behind decisions already made.
+    --
+    -- Two columns, because one cannot do the job. Keying currency on the pointer
+    -- deadlocks: the pointer can only be set once the successor row exists, and the
+    -- successor cannot be inserted while the predecessor still looks current. So
+    -- superseded_at retires the old row first, and superseded_by records what
+    -- replaced it -- currency and lineage, set in that order, inside one transaction.
+    superseded_at  timestamptz,
     superseded_by  uuid references change_summary (id),
     constraint summary_status_known
         check (status in ('pending', 'ready', 'failed'))
@@ -62,4 +69,4 @@ create table change_summary (
 
 create unique index change_summary_current_pair
     on change_summary (template_id, from_version, to_version)
-    where superseded_by is null;
+    where superseded_at is null;

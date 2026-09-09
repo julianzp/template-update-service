@@ -30,7 +30,7 @@ public class PendingUpdateQuery {
                 on s.template_id  = e.template_id
                and s.from_version = e.applied_version
                and s.to_version   = c.version_seq
-               and s.superseded_by is null
+               and s.superseded_at is null
              where e.firm_id = :firmId
                and e.engagement_status = 'active'
                and e.applied_version < c.version_seq
