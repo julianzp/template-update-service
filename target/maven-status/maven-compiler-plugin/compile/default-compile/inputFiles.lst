@@ -1,0 +1,9 @@
+/Users/julzapat2/Desktop/template-update-service/src/main/java/com/template_update_service/TemplateUpdateServiceApplication.java
+/Users/julzapat2/Desktop/template-update-service/src/main/java/com/template_update_service/domain/DecisionType.java
+/Users/julzapat2/Desktop/template-update-service/src/main/java/com/template_update_service/domain/EngagementStatus.java
+/Users/julzapat2/Desktop/template-update-service/src/main/java/com/template_update_service/domain/TemplateVersion.java
+/Users/julzapat2/Desktop/template-update-service/src/main/java/com/template_update_service/domain/VersionPair.java
+/Users/julzapat2/Desktop/template-update-service/src/main/java/com/template_update_service/events/EventQueue.java
+/Users/julzapat2/Desktop/template-update-service/src/main/java/com/template_update_service/events/TemplateEvent.java
+/Users/julzapat2/Desktop/template-update-service/src/main/java/com/template_update_service/summary/ChangeSummary.java
+/Users/julzapat2/Desktop/template-update-service/src/main/java/com/template_update_service/summary/ChangeSummaryPort.java
