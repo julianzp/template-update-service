@@ -1,0 +1,16 @@
+com/template_update_service/events/EventQueue.class
+com/template_update_service/events/TemplateEvent$EngagementEvent.class
+com/template_update_service/summary/ChangeSummary$Status.class
+com/template_update_service/events/TemplateEvent$TemplateUpdateApplied.class
+com/template_update_service/events/TemplateEvent$EngagementCreated.class
+com/template_update_service/events/TemplateEvent.class
+com/template_update_service/TemplateUpdateServiceApplication.class
+com/template_update_service/domain/TemplateVersion.class
+com/template_update_service/events/TemplateEvent$UpdateDeclined.class
+com/template_update_service/domain/EngagementStatus.class
+com/template_update_service/events/TemplateEvent$DecisionEvent.class
+com/template_update_service/summary/ChangeSummary.class
+com/template_update_service/summary/ChangeSummaryPort.class
+com/template_update_service/events/TemplateEvent$TemplatePublished.class
+com/template_update_service/domain/VersionPair.class
+com/template_update_service/domain/DecisionType.class
